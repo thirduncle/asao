@@ -1,8 +1,5 @@
-import urllib, geopy.distance
+import urllib, requests, json, time
 from urlparse import urlparse
-import requests
-import json
-import time
 
 '''
 response1 = requests.post('http://telematics.oasa.gr/api/?act=getBusLocation&p1=1771')
