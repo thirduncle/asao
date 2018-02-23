@@ -1,0 +1,204 @@
+Plirofories gia oles tis grammes
+
+http://telematics.oasa.gr/api/?act=webGetLines
+
+
+webGetLinesWithMLInfo
+
+Είναι όμοιο με το webGetLines μόνο που στέλνει δύο παραπάνω στοιχεία το ml_code και το sdc_code.
+
+http://telematics.oasa.gr/api/?act=webGetLinesWithMLInfo
+
+"line code" oti fainetai sto URL aristera apo to onoma tou leoforeio:
+
+http://telematics.oasa.gr/#lineDetails_1151_021
+%20:%20%CE%A0%CE%9B%CE%91%CE%A4%CE%95%CE%99%CE%91%20%CE%9A%CE%91%CE%9D%CE%99%CE%93%CE%93%CE%9F%CE%A3%20-%20%CE%93%CE%9A%CE%A5%CE%96H(%CE%9A%CE%A5%CE%9A%CE%9B%CE%99%CE%9A%CE%97)_9-54
+
+
+p.x. gia 021 einai to line code=1151
+
+Gia to onoma tis grammis:
+
+http://telematics.oasa.gr/api/?act=getLineName&p1=linecode
+
+http://telematics.oasa.gr/api/?act=getLineName&p1=1151
+
+[{"line_descr":"\u03a0\u039b\u0391\u03a4\u0395\u0399\u0391 \u039a\u0391\u039d\u0399\u0393\u0393\u039f\u03a3 - \u0393\u039a\u03a5\u0396H(\u039a\u03a5\u039a\u039b\u0399\u039a\u0397)",
+"line_descr_eng":"PLATEIA KANIGKOS - GKIZI","line_id":"021"}]
+
+Pio hrisimo einai na dw ola ta availabe routes gi'afto to linecode:
+
+
+http://telematics.oasa.gr/api/?act=getRoutesForLine&p1=linecode
+
+http://telematics.oasa.gr/api/?act=getRoutesForLine&p1=1151
+
+[{"route_code":"2484",
+"route_id":"01",
+"route_descr":"\u03a0\u039b\u0391\u03a4\u0395\u0399\u0391 \u039a\u0391\u039d\u0399\u0393\u0393\u039f\u03a3 - \u0393\u039a\u03a5\u0396\u0397",
+"route_active":"1",
+"route_descr_eng":"PLATEIA KANIGGOS - GKYZI"}]
+
+I sigkekrimeni einai kikliki ara ehei mono ena route. 
+
+Gia to 046 p.x. linecode=831
+
+http://telematics.oasa.gr/#lineDetails_831_046%20:
+%20%CE%9C%CE%9F%CE%A5%CE%A3%CE%95%CE%99%CE%9F%20-%20%CE%95%CE%9B%CE%9B%CE%97%CE%9D%CE%9F%CE%A1%CE%A9%CE%A3%CE%A9%CE%9D_24-54
+
+Epistrefei dio route codes: 1820, 1821
+
+[{"route_code":"1820",
+"route_id":"01",
+"route_descr":"\u039c\u039f\u03a5\u03a3\u0395\u0399\u039f - \u0395\u039b\u039b\u0397\u039d\u039f\u03a1\u03a9\u03a3\u03a9\u039d",
+"route_active":"1",
+route_descr_eng":"MOUSEIO - ELLINOROSON"},
+{"route_code":"1821",
+"route_id":"02",
+route_descr":"\u0395\u039b\u039b\u0397\u039d\u039f\u03a1\u03a9\u03a3\u03a9\u039d - \u039c\u039f\u03a5\u03a3\u0395\u0399\u039f",
+"route_active":"1",
+"route_descr_eng":"ELLINOROSON - MOYSEIO"}]
+
+Gia closest stop:
+
+http://telematics.oasa.gr/api/?act=getClosestStops&p1=x&p2=y
+
+p.x gia kallidromiou me x,y apo google:
+
+http://telematics.oasa.gr/api/?act=getClosestStops&p1=37.9871522&p2=23.7355566
+
+https://www.google.gr/maps/place/Kallidromiou,+Athina/@37.9871522,23.7355566,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1bd35c351fb41:0x9b892376beec6e4d!8m2!3d37.9871522!4d23.7377453?hl=en
+
+
+37.9873577,23.7345926
+37.9871522,23.7355566
+
+oi 3 kontinoteres einai:
+
+{"StopCode":"60060",
+"StopID":"060060",
+"StopDescr":"\u03a0\u039b.\u0395\u039e\u0391\u03a1\u03a7\u0395\u0399\u03a9\u039d",
+"StopDescrEng":"PLATIA EKSARCHION",
+"StopStreet":"\u03a3\u03a0\u03a5\u03a1.\u03a4\u03a1\u0399\u039a\u039f\u03a5\u03a0\u0397",
+"StopStreetEng":null,
+"StopHeading":"193",
+"StopLat":"37.9873577",
+"StopLng":"23.7345926",
+"distance":"0.0009856603116690081"},
+{"StopCode":"60033",
+"StopID":"060033",
+"StopDescr":
+"\u03a0\u039f\u039b\u03a5\u03a4\u0395\u03a7\u039d\u0395\u0399\u039f",
+"StopDescrEng":"POLITECHNIO",
+"StopStreet":"\u039c\u03a0\u039f\u03a5\u039c\u03a0\u039f\u03a5\u039b\u0399\u039d\u0391\u03a3",
+"StopStreetEng":null,
+"StopHeading":"14",
+"StopLat":"37.9879039",
+"StopLng":"23.7333238",
+"distance":"0.002355939033590308"},
+{"StopCode":"60011",
+"StopID":"060011",
+"StopDescr":"\u0391\u03a1\u0391\u03a7\u03a9\u0392\u0397\u03a3",
+"StopDescrEng":"ARACHOVIS",
+"StopStreet":"\u03a7\u0391\u03a1.\u03a4\u03a1\u0399\u039a\u039f\u03a5\u03a0\u0397",
+"StopStreetEng":null,
+"StopHeading":"66",
+"StopLat":"37.9849398",
+"StopLng":"23.7374186",
+"distance":"0.002891670409987925"},
+
+i apostasti pithanon ipologizetai san apli diafora (longitude1-longitude2)
+
+Gia tin enarxi:
+
+1. Pairnw oles tis staseis
+
+p.x. gia 813 - line code 808
+
+http://telematics.oasa.gr/#lineDetails_808_813
+
+%20:%20%CE%91%CE%92%CE%95%CE%A1%CE%A9%CE%A6%20-%20%CE%A0%CE%A1%CE%9F%CE%A5%CE%A3%CE%A3%CE%97%CE%A3_7-54
+
+
+line code -> get routes and details -> 
+
+http://telematics.oasa.gr/api/?act=getRoutesForLine&p1=808
+
+[{"route_code":"1771",
+"route_id":"01",
+"route_descr":"\u0391\u0392\u0395\u03a1\u03a9\u03a6 - \u03a0\u03a1\u039f\u03a5\u03a3\u03a3\u0397\u03a3",
+"route_active":"1",
+"route_descr_eng":"AVEROF - PROUSSIS"},
+{"route_code":"1770",
+"route_id":"02",
+"route_descr":"\u03a0\u03a1\u039f\u03a5\u03a3\u03a3\u0397\u03a3 - \u0391\u0392\u0395\u03a1\u03a9\u03a6",
+"route_active":"1",
+"route_descr_eng":"PROUSSIS - AVEROF"}]
+
+gia to route pou m'endiaferei p.x. AVEROF - PROUSSIS 1771 pairnw details and stops:
+
+http://telematics.oasa.gr/api/?act=webGetRoutesDetailsAndStops&p1=1771
+
+webGetRoutesDetailsAndStops
+
+Επιστρέφει τις λεπτομέρειες της διαδρομής και συγκεκριμένα τις στάσεις, την σειρά με την οποία εμφανίζονται 
+και την τοποθεσία τους. Χρειαζόμαστε και μια παράμετρο που είναι το routecode δηλαδή ο κώδικας μιας διαδρομής. Στο παράδειγμα εμφανίζονται τα απότελέσματα του webGetRoutesDetailsAndStops της διαδρομής ΠΕΙΡΑΙΑΣ-ΒΟΥΛΑ ( routecode =2045)
+Api Endpoint
+
+http://telematics.oasa.gr/api/?act=webGetRoutesDetailsAndStops&p1=routecode
+
+An thelw mono ta stops:
+
+http://telematics.oasa.gr/api/?act=webGetStops&p1=1771
+
+{"StopCode":"60668",
+"StopID":"060668",
+"StopDescr":"\u039a\u0391\u039b\u039b\u0399\u0394\u03a1\u039f\u039c\u0399\u039f\u03a5",
+"StopDescrEng":"KALLIDROMIOY",
+"StopStreet":"\u0399\u03a0\u03a0\u039f\u039a\u03a1\u0391\u03a4\u039f\u03a5\u03a3",
+"StopStreetEng":null,
+"StopHeading":"244",
+"StopLat":"37.9847817",
+"StopLng":"23.7394074",
+"RouteStopOrder":"9",
+"StopType":"0",
+"StopAmea":"0"}
+
+Gia to bus location:
+
+http://telematics.oasa.gr/api/?act=getBusLocation&p1=1771
+
+getBusLocation
+
+Επιστρέφει την τοποθεσία των λεωφορείων μιας συγκεκριμένης διαδρομής. 
+Χρειαζόμαστε και μια παράμετρο που είναι το routecode δηλαδή ο κώδικας μιας διαδρομής . 
+Στο παράδειγμα εμφανίζεται η απάντηση της διαδρομής ΠΕΙΡΑΙΑΣ-ΒΟΥΛΑ ( routecode = 2045 )
+Api Endpoint
+
+http://telematics.oasa.gr/api/?act=getBusLocation&p1=routecode
+
+webGetStops
+
+Επιστρέφει τις στάσεις μιας διαδρομής. Χρειαζόμαστε και μια παράμετρο που είναι το routecode 
+δηλαδή ο κώδικας μιας διαδρομής . Στο παράδειγμα εμφανίζεται η πρώτη στάση της διαδρομής 
+ΠΕΙΡΑΙΑΣ-ΒΟΥΛΑ ( routecode = 2045 )
+Api Endpoint
+
+http://telematics.oasa.gr/api/?act=webGetStops&p1=routecode
+
+
+getStopArrivals
+
+Επιστρέφει τα λεωφορεία που αναμένει σύντομα η στάση. Χρειαζόμαστε και μια παράμετρο που είναι το stopcode 
+δηλαδή ο κώδικας μιας στάσης. Για να τον βρούμε μπορούμε να χρησιμοποιήσουμε την webGetStops. 
+Στο παράδειγμα εμφανίζονται τα απότελέσματα του getStopArrivals της στάσης ΗΣΑΠ Ν.ΦΑΛΗΡΟΥ ( stopcode = 400075 )
+Api Endpoint
+
+http://telematics.oasa.gr/api/?act=getStopArrivals&p1=stopcode
+
+getStopNameAndXY
+
+Επιστρέφει το όνομα της στάσης και τις συντεταγμένες της. Χρειαζόμαστε και μια παράμετρο που είναι το stopcode δηλαδή ο κώδικας μιας στάσης. Για να τον βρούμε μπορούμε να χρησιμοποιήσουμε την webGetStops. Στο παράδειγμα εμφανίζονται τα απότελέσματα του getStopArrivals της στάσης ΗΣΑΠ Ν.ΦΑΛΗΡΟΥ ( stopcode = 400075 )
+Api Endpoint
+
+http://telematics.oasa.gr/api/?act=getStopNameAndXY&p1=stopcode
